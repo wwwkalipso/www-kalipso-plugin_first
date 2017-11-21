@@ -1,5 +1,4 @@
 <?php
-
 namespace includes\common;
 class WWWKalipsoAutoload
 {

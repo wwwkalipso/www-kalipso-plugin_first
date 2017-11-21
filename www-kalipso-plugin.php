@@ -6,6 +6,8 @@ Description: WWW Kalipso of the plugin.
 Version: 1.0
 Author: datsenkoelen
 Author URI: https://www.linkedin.com/in/datsenkoelen/
+Text Domain: step-by-step-development-plugin
+Domain Path: /languages/
 License: A "Slug" license name e.g. GPL2
     Copyright 2017  Datsenko Elen  (email: 
 datsenkolena@gmail.com)
@@ -22,7 +24,8 @@ datsenkolena@gmail.com)
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 require_once plugin_dir_path(__FILE__) . '/config-path.php';
-require_once STEPBYSTEP_PlUGIN_DIR.'/includes/common/WWWKalipsoAutoload.php';
-require_once STEPBYSTEP_PlUGIN_DIR.'/includes/WWWKalpsoPlugin.php';
+require_once WWWKALIPSO_PlUGIN_DIR.'/includes/common/WWWKalipsoAutoload.php';
+require_once WWWKALIPSO_PlUGIN_DIR.'/includes/WWWKalipsoPlugin.php';
+
 register_activation_hook( __FILE__, array('includes\WWWKalipsoPlugin' ,  'activation' ) );
 register_deactivation_hook( __FILE__, array('includes\WWWKalipsoPlugin' ,  'deactivation' ) );
