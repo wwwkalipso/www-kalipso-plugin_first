@@ -1,5 +1,18 @@
 <?php
 namespace includes\common;
+
+use includes\controllers\admin\menu\WWWKalipsoMainAdminMenuController;
+use includes\controllers\admin\menu\WWWKalipsoMainAdminSubMenuController;
+use includes\controllers\admin\menu\WWWKalipsoMyCommentsMenuController;
+use includes\controllers\admin\menu\WWWKalipsoMyDashboardMenuController;
+use includes\controllers\admin\menu\WWWKalipsoMyMediaMenuController;
+use includes\controllers\admin\menu\WWWKalipsoMyOptionsMenuController;
+use includes\controllers\admin\menu\WWWKalipsoMyPagesMenuController;
+use includes\controllers\admin\menu\WWWKalipsoMyPluginsMenuController;
+use includes\controllers\admin\menu\WWWKalipsoMyPostsMenuController;
+use includes\controllers\admin\menu\WWWKalipsoMyThemeMenuController;
+use includes\controllers\admin\menu\WWWKalipsoMyToolsMenuController;
+use includes\controllers\admin\menu\WWWKalipsoMyUsersMenuController;
 use includes\example\WWWKalipsoExampleAction;
 use includes\example\WWWKalipsoExampleFilter;
 class WWWKalipsoLoader
@@ -11,6 +24,7 @@ class WWWKalipsoLoader
         // Проверяем в админке мы или нет
         if ( is_admin() ) {
             // Когда в админке вызываем метод admin()
+
             $this->admin();
         } else {
             // Когда на сайте вызываем метод site()
@@ -28,6 +42,18 @@ class WWWKalipsoLoader
      * Метод будет срабатывать когда вы находитесь в Админ панеле. Загрузка классов для Админ панели
      */
     public function admin(){
+        WWWKalipsoMainAdminMenuController::newInstance();
+        WWWKalipsoMainAdminSubMenuController::newInstance();
+        WWWKalipsoMyDashboardMenuController::newInstance();
+        WWWKalipsoMyPostsMenuController::newInstance();
+        WWWKalipsoMyMediaMenuController::newInstance();
+        WWWKalipsoMyPagesMenuController::newInstance();
+        WWWKalipsoMyCommentsMenuController::newInstance();
+        WWWKalipsoMyThemeMenuController::newInstance();
+        WWWKalipsoMyPluginsMenuController::newInstance();
+        WWWKalipsoMyUsersMenuController::newInstance();
+        WWWKalipsoMyToolsMenuController::newInstance();
+        WWWKalipsoMyOptionsMenuController::newInstance();
     }
     /**
      * Метод будет срабатывать когда вы находитесь Сайте. Загрузка классов для Сайта

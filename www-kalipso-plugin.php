@@ -4,7 +4,7 @@ Plugin Name: WWW Kalipso Plugin
 Plugin URI: https://github.com/wwwkalipso/www-kalipso-plugin
 Description: WWW Kalipso of the plugin.
 Version: 1.0
-Author: datsenkoelen
+Author: Datsenko Elen
 Author URI: https://www.linkedin.com/in/datsenkoelen/
 Text Domain: step-by-step-development-plugin
 Domain Path: /languages/
@@ -29,3 +29,5 @@ require_once WWWKALIPSO_PlUGIN_DIR.'/includes/WWWKalipsoPlugin.php';
 
 register_activation_hook( __FILE__, array('includes\WWWKalipsoPlugin' ,  'activation' ) );
 register_deactivation_hook( __FILE__, array('includes\WWWKalipsoPlugin' ,  'deactivation' ) );
+
+

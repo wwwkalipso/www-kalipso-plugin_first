@@ -23,7 +23,7 @@ class WWWKalipsoLocalization
          *                   (константа STEPBYSTEP_PlUGIN_DIR_LOCALIZATION заданая в файле config-path.php)
          */
         load_plugin_textdomain(WWWKALIPSO_PlUGIN_TEXTDOMAIN, false, WWWKALIPSO_PlUGIN_DIR_LOCALIZATION);
-        error_log(WWWKALIPSO_PlUGIN_TEXTDOMAIN);
+
 
     }
 }
