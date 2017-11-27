@@ -13,6 +13,8 @@ use includes\controllers\admin\menu\WWWKalipsoMyPostsMenuController;
 use includes\controllers\admin\menu\WWWKalipsoMyThemeMenuController;
 use includes\controllers\admin\menu\WWWKalipsoMyToolsMenuController;
 use includes\controllers\admin\menu\WWWKalipsoMyUsersMenuController;
+use includes\controllers\site\shortcodes\WWWKalipsoCalendarPricesMonthShortcodeController;
+use includes\controllers\site\shortcodes\WWWKalipsoGoogleShortcodeController;
 use includes\example\WWWKalipsoExampleAction;
 use includes\example\WWWKalipsoExampleFilter;
 class WWWKalipsoLoader
@@ -59,6 +61,8 @@ class WWWKalipsoLoader
      * Метод будет срабатывать когда вы находитесь Сайте. Загрузка классов для Сайта
      */
     public function site(){
+        WWWKalipsoCalendarPricesMonthShortcodeController::newInstance();
+        WWWKalipsoGoogleShortcodeController::newInstance();
     }
     /**
      * Метод будет срабатывать везде. Загрузка классов для Админ панеле и Сайта
@@ -66,15 +70,16 @@ class WWWKalipsoLoader
     public function all(){
 
         WWWKalipsoLocalization::getInstance();
-       $wWWKalipsoExampleAction = WWWKalipsoExampleAction::newInstance();
-       /*$wWWKalipsoExampleFilter = WWWKalipsoExampleFilter::newInstance();
-       $wWWKalipsoExampleFilter->callMyFilter("Roman");
-       $wWWKalipsoExampleFilter->callMyFilterAdditionalParameter("Roman", "Softgroup", "Poltava");
+        WWWKalipsoLoaderScript::getInstance();
+        /*$wWWKalipsoExampleAction = WWWKalipsoExampleAction::newInstance();
+        $wWWKalipsoExampleFilter = WWWKalipsoExampleFilter::newInstance();
+        $wWWKalipsoExampleFilter->callMyFilter("Roman");
+        $wWWKalipsoExampleFilter->callMyFilterAdditionalParameter("Roman", "Softgroup", "Poltava");
 
-       $wWWKalipsoExampleAction = WWWKalipsoExampleAction::newInstance();
-        
+        $wWWKalipsoExampleAction = WWWKalipsoExampleAction::newInstance();
 
-       $wWWKalipsoExampleAction->callMyAction();
-       $wWWKalipsoExampleAction->callMyActionAdditionalParameter( 'test1', 'test2', 'test3' );*/
+
+        $wWWKalipsoExampleAction->callMyAction();
+        $wWWKalipsoExampleAction->callMyActionAdditionalParameter( 'test1', 'test2', 'test3' );*/
     }
 }
