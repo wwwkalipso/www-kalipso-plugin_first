@@ -1,12 +1,18 @@
 <?php
 
 namespace includes\controllers\admin\menu;
+
+use includes\models\admin\menu\WWWKalipsoMainAdminMenuModel;
 use includes\common\WWWKalipsoRequestApi;
 use includes\common\WWWKalipsoGoogleRequestApi;
 
  class WWWKalipsoMainAdminMenuController extends WWWKalipsoBaseAdminMenuController
  {
-
+     public $model;
+     public function __construct(){
+         parent::__construct();
+         $this->model = WWWKalipsoMainAdminMenuModel::newInstance();
+     }
 
      public function action()
      {
@@ -39,11 +45,14 @@ use includes\common\WWWKalipsoGoogleRequestApi;
      public function render()
      {
          // TODO: Implement render() method.
-         _e("Hello world", WWWKALIPSO_PlUGIN_TEXTDOMAIN);
-         $reuestAPI = WWWKalipsoRequestApi::getInstance();
+         //_e("Hello world", WWWKALIPSO_PlUGIN_TEXTDOMAIN);
+         //$reuestAPI = WWWKalipsoRequestApi::getInstance();
         // var_dump($reuestAPI->getCalendarPricesMonth('RUB', 'MOW', 'LED'));
-         $reuestGoogleAPI = WWWKalipsoGoogleRequestApi::getInstance();
-         var_dump($reuestGoogleAPI->getPlaceGoogle('49.5937300,34.5407300', '200', 'restaurant'));
+         //$reuestGoogleAPI = WWWKalipsoGoogleRequestApi::getInstance();
+         //var_dump($reuestGoogleAPI->getPlaceGoogle('49.5937300,34.5407300', '200', 'restaurant'));
+         $pathView = WWWKALIPSO_PlUGIN_DIR."/includes/views/admin/menu/WWWKalipsoMainAdminMenu.view.php";
+
+         $this->loadView($pathView);
 
      }
 
