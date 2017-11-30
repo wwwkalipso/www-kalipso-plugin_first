@@ -4,7 +4,7 @@ namespace includes\common;
 class WWWKalipsoGoogleRequestApi
 {
     const WWWKALIPSO_GOOGLE_API_V1 = "https://maps.googleapis.com/maps/api/place/nearbysearch/";
-    const WWWKALIPSO_GOOGLE_KEY = "AIzaSyDtJOCNcAEta51HBHPMnLTLe3lxX6QQj1o";
+    //const WWWKALIPSO_GOOGLE_KEY = "AIzaSyDtJOCNcAEta51HBHPMnLTLe3lxX6QQj1o";
 
     private static $instance = null;
     private function __construct(){
@@ -16,7 +16,8 @@ class WWWKalipsoGoogleRequestApi
         return self::$instance;
     }
     public function getKey(){
-        return "&key=".self::WWWKALIPSO_GOOGLE_KEY;
+        $key = get_option(WWWKALIPSO_PlUGIN_OPTION_NAME);
+        return "&key=".$key['key'];//self::WWWKALIPSO_GOOGLE_KEY;
     }
 
     public function getPlaceGoogle($location, $radius, $type){
@@ -39,11 +40,12 @@ class WWWKalipsoGoogleRequestApi
 
         $requestURL = self::WWWKALIPSO_GOOGLE_API_V1."json?{$location}{$radius}{$type}"
             .$this->getKey();
+        error_log($requestURL.' ++++');
         return $this->requestAPI($requestURL);
     }
     public function requestAPI($requestURL){
         $response = wp_remote_get( $requestURL, array('headers' => array()) );
-        //error_log(var_dump($response));
+
         $body = wp_remote_retrieve_body($response);
         $json = json_decode($body);
         //if (!is_wp_error($body) && $body.status == 'OK') {

@@ -22,6 +22,7 @@ class WWWKalipsoMainAdminMenuModel implements WWWKalipsoICreatorInstance
         // add_settings_section( $id, $title, $callback, $page );
         // Добавление секции опций
         add_settings_section( 'www_kalipso_account_section_id', __('Account', WWWKALIPSO_PlUGIN_TEXTDOMAIN), '', 'www-kalipso-plugin' );
+        add_settings_section( 'www_kalipso_key_id', __('Key', WWWKALIPSO_PlUGIN_TEXTDOMAIN), '', 'www-kalipso-plugin' );
         // add_settings_field( $id, $title, $callback, $page, $section, $args );
         // Добавление полей опций
         add_settings_field(
@@ -37,6 +38,13 @@ class WWWKalipsoMainAdminMenuModel implements WWWKalipsoICreatorInstance
             array(&$this, 'markerField'),
             'www-kalipso-plugin',
             'www_kalipso_account_section_id'
+        );
+        add_settings_field(
+            'www_kalipso_key_id',
+            __('Key', WWWKALIPSO_PlUGIN_TEXTDOMAIN),
+            array(&$this, 'keyField'),
+            'www-kalipso-plugin',
+            'www_kalipso_key_id'
         );
     }
     public function tokenField(){
@@ -55,6 +63,15 @@ class WWWKalipsoMainAdminMenuModel implements WWWKalipsoICreatorInstance
                name="<?php echo WWWKALIPSO_PlUGIN_OPTION_NAME; ?>[account][marker]"
                value="<?php echo esc_attr( $option['account']['marker'] ) ?>" />
         <?php
+    }
+    public function keyField(){
+        $option = get_option(WWWKALIPSO_PlUGIN_OPTION_NAME);
+        ?>
+        <input type="text"
+               name="<?php echo WWWKALIPSO_PlUGIN_OPTION_NAME; ?>[key]"
+               value="<?php echo esc_attr( $option['key'] ) ?>" />
+        <?php
+       
     }
     /**
      * Сохранение опции

@@ -13,7 +13,8 @@ class WWWKalipsoDefaultOption
             'account' => array(
                 'marker' => '',
                 'token' => ''
-            )
+            ),
+            'key' => ''
         );
         // Фильтр которому можно подключиться и изменить массив дефолтных настроек
         $defaults = apply_filters('www_kalipso_default_option', $defaults );
