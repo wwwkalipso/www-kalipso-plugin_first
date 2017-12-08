@@ -52,15 +52,12 @@ class WWWKalipsoGoogleShortcodeController extends WWWKalipsoShortcodesController
          * атрибуты. Устанавливает значения атрибута по умолчанию, если он не указан.
          */
         $atts = shortcode_atts( array(
-            'location' => '49.5937300,34.5407300',
-            'radius' => '',
-            'type' => '',
+            'city' => '',
         ), $atts, $tag );
         /*$reuestAPI = StepByStepRequestApi::getInstance();
         $data = $reuestAPI->getCalendarPricesMonth($atts['currency'], $atts['origin'],
             $atts['destination'], $atts['month']);*/
-        $data = $this->model->getData($atts['location'], $atts['radius'],
-            $atts['type']);
+        $data = $this->model->getData($atts['city']);
         if ($data == false) return false;
         return $this->render($data);
     }
@@ -72,7 +69,32 @@ class WWWKalipsoGoogleShortcodeController extends WWWKalipsoShortcodesController
     public function render($data)
     {
         // TODO: Implement render() method.
-        var_dump('<pre>', $data, '</pre>');
+        //var_dump('<pre>', $data, '</pre>');
+        $output = '';
+
+
+        foreach ($data as $row) {
+
+            $output .= '<form class="www_custom"   method="post">
+                            
+                                <label>'.__('Restoraunt', WWWKALIPSO_PlUGIN_TEXTDOMAIN ).'</label>
+                                <input  type="text" name="www_restotaunt_name" class="www-restotaunt-name"  
+                                value="'.str_replace('"',"'",$row->name).'" readonly="readonly" ><br>
+                                
+                                <label>'.__('Address', WWWKALIPSO_PlUGIN_TEXTDOMAIN ).'</label>
+                                <input type="text" name="www_address" class="www-address" 
+                                value="'.str_replace('"',"'",$row->formatted_address).'" readonly="readonly"><br>
+                                 
+                                <label>'.__('Rating', WWWKALIPSO_PlUGIN_TEXTDOMAIN ).'</label>
+                                <input type="text" name="www_rating" class="www-rating" value="'.$row->rating.'" readonly="readonly"><br>
+                                
+                                <input type="hidden" name="www_place_id" class="www-place_id" value="'.$row->place_id.'">
+                                <button class="wwwkalipso-google-place-btn-add" >'.__('Add', WWWKALIPSO_PlUGIN_TEXTDOMAIN ).'</button> 
+                                         
+                       </form>';
+
+        }
+        return $output;
     }
     public static function newInstance()
     {

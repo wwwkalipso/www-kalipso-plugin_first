@@ -1,0 +1,13 @@
+.www_custom {
+    border: solid;
+    padding:5pt;
+    margin: 10pt;
+}
+.www-restotaunt-name,
+.www-rating,
+.www-address {
+    background-color: antiquewhite;
+    width: 100%;
+
+
+}

@@ -1,6 +1,9 @@
 <?php
 namespace includes\common;
 
+use includes\ajax\WWWKalipsoGuestBookAjaxHandler;
+use includes\ajax\WWWKalipsoGooglePlaceAjaxHandler;
+use includes\controllers\admin\menu\WWWKalipsoGuestBookSubMenuController;
 use includes\controllers\admin\menu\WWWKalipsoMainAdminMenuController;
 use includes\controllers\admin\menu\WWWKalipsoMainAdminSubMenuController;
 use includes\controllers\admin\menu\WWWKalipsoMyCommentsMenuController;
@@ -15,8 +18,11 @@ use includes\controllers\admin\menu\WWWKalipsoMyToolsMenuController;
 use includes\controllers\admin\menu\WWWKalipsoMyUsersMenuController;
 use includes\controllers\site\shortcodes\WWWKalipsoCalendarPricesMonthShortcodeController;
 use includes\controllers\site\shortcodes\WWWKalipsoGoogleShortcodeController;
+use includes\controllers\site\shortcodes\WWWKalipsoGuestBookShortcodesController;
 use includes\example\WWWKalipsoExampleAction;
 use includes\example\WWWKalipsoExampleFilter;
+use includes\widgets\WWWKalipsoGooglePlaceDashboardWidget;
+use includes\widgets\WWWKalipsoGuestBookDashboardWidget;
 class WWWKalipsoLoader
 {
     private static $instance = null;
@@ -56,6 +62,11 @@ class WWWKalipsoLoader
         WWWKalipsoMyUsersMenuController::newInstance();
         WWWKalipsoMyToolsMenuController::newInstance();
         WWWKalipsoMyOptionsMenuController::newInstance();
+        WWWKalipsoGuestBookSubMenuController::newInstance();
+
+        // Подключаем виджет гостевой книги
+        WWWKalipsoGuestBookDashboardWidget::newInstance();
+        WWWKalipsoGooglePlaceDashboardWidget::newInstance();
     }
     /**
      * Метод будет срабатывать когда вы находитесь Сайте. Загрузка классов для Сайта
@@ -63,6 +74,9 @@ class WWWKalipsoLoader
     public function site(){
         WWWKalipsoCalendarPricesMonthShortcodeController::newInstance();
         WWWKalipsoGoogleShortcodeController::newInstance();
+
+        // Шорткод для формы гостевой книги
+        WWWKalipsoGuestBookShortcodesController::newInstance();
     }
     /**
      * Метод будет срабатывать везде. Загрузка классов для Админ панеле и Сайта
@@ -71,6 +85,9 @@ class WWWKalipsoLoader
 
         WWWKalipsoLocalization::getInstance();
         WWWKalipsoLoaderScript::getInstance();
+        // подключаем ajax обработчик
+        WWWKalipsoGuestBookAjaxHandler::newInstance();
+        WWWKalipsoGooglePlaceAjaxHandler::newInstance();
         /*$wWWKalipsoExampleAction = WWWKalipsoExampleAction::newInstance();
         $wWWKalipsoExampleFilter = WWWKalipsoExampleFilter::newInstance();
         $wWWKalipsoExampleFilter->callMyFilter("Roman");

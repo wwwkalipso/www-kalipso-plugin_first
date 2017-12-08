@@ -27,6 +27,10 @@ require_once plugin_dir_path(__FILE__) . '/config-path.php';
 require_once WWWKALIPSO_PlUGIN_DIR.'/includes/common/WWWKalipsoAutoload.php';
 require_once WWWKALIPSO_PlUGIN_DIR.'/includes/WWWKalipsoPlugin.php';
 
+//Регистрация виджета
+add_action('widgets_init', create_function('', 'return register_widget("includes\widgets\WWWKalipsoGuestBookWidget");'));
+add_action('widgets_init', create_function('', 'return register_widget("includes\widgets\WWWKalipsoGooglePlaceWidget");'));
+
 register_activation_hook( __FILE__, array('includes\WWWKalipsoPlugin' ,  'activation' ) );
 register_deactivation_hook( __FILE__, array('includes\WWWKalipsoPlugin' ,  'deactivation' ) );
 

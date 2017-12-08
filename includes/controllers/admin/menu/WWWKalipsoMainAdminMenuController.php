@@ -49,7 +49,7 @@ use includes\common\WWWKalipsoGoogleRequestApi;
          //$reuestAPI = WWWKalipsoRequestApi::getInstance();
         // var_dump($reuestAPI->getCalendarPricesMonth('RUB', 'MOW', 'LED'));
          //$reuestGoogleAPI = WWWKalipsoGoogleRequestApi::getInstance();
-         //var_dump($reuestGoogleAPI->getPlaceGoogle('49.5937300,34.5407300', '200', 'restaurant'));
+         //var_dump($reuestGoogleAPI->getPlaceGoogle('Poltava'));
          $pathView = WWWKALIPSO_PlUGIN_DIR."/includes/views/admin/menu/WWWKalipsoMainAdminMenu.view.php";
 
          $this->loadView($pathView);

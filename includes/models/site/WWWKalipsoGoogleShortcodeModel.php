@@ -10,19 +10,17 @@ class WWWKalipsoGoogleShortcodeModel implements WWWKalipsoICreatorInstance
     }
     /**
      * Получения данных от кэша если данных нет в кэше запросить от сервера и записать в кэш
-     * @param $location
-     * @param $radius
-     * @param $type
+     * @param $city
      * @return array|bool
      */
-    public function getData($location, $radius, $type){
-        error_log("model{$location}, {$radius}, {$type}");
+    public function getData($city){
+        error_log("model{$city}");
         $cacheKey = "";
         $data = array();
-        $cacheKey = $this->getCacheKey($location, $radius, $type);
+        $cacheKey = $this->getCacheKey($city);
         if ( false === ($data = get_transient($cacheKey))) {
             $reuestAPI = WWWKalipsoGoogleRequestApi::getInstance();
-            $data = $reuestAPI->getPlaceGoogle($location, $radius, $type);
+            $data = $reuestAPI->getPlaceGoogle($city);
             set_transient($cacheKey, $data, 100);
         }
         return $data;
@@ -30,9 +28,9 @@ class WWWKalipsoGoogleShortcodeModel implements WWWKalipsoICreatorInstance
     /**
      * Создает ключ для кэша
      */
-    public function getCacheKey($location, $radius, $type){
+    public function getCacheKey($city){
         return WWWKALIPSO_PlUGIN_TEXTDOMAIN
-            ."_google_location_{$location}_radius_{$radius}_type_{$type}";
+            ."_google_location_{$city}";
     }
     public static function newInstance()
     {

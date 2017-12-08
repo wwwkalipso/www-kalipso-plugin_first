@@ -3,7 +3,7 @@
 namespace includes\common;
 class WWWKalipsoGoogleRequestApi
 {
-    const WWWKALIPSO_GOOGLE_API_V1 = "https://maps.googleapis.com/maps/api/place/nearbysearch/";
+    const WWWKALIPSO_GOOGLE_API_V1 = "https://maps.googleapis.com/maps/api/place/textsearch/";
     //const WWWKALIPSO_GOOGLE_KEY = "AIzaSyDtJOCNcAEta51HBHPMnLTLe3lxX6QQj1o";
 
     private static $instance = null;
@@ -20,27 +20,19 @@ class WWWKalipsoGoogleRequestApi
         return "&key=".$key['key'];//self::WWWKALIPSO_GOOGLE_KEY;
     }
 
-    public function getPlaceGoogle($location, $radius, $type){
+    public function getPlaceGoogle($city){
         $requestURL = "";
-        if ($location == false || empty($location)){
-            $location = "location=49.5937300,34.5407300";
+        if ($city == false || empty($city)){
+            $city = "Poltava";
         } else {
-            $location = "location={$location}";
-        }
-        if ($radius == false || empty($radius)){
-            $radius = "&radius=200";
-        } else {
-            $radius = "&radius={$radius}";
-        }
-        if ($type == false || empty($type)){
-            $type = "type=restaurant";
-        } else {
-            $type = "&type={$type}";
+            $city = "{$city}";
         }
 
-        $requestURL = self::WWWKALIPSO_GOOGLE_API_V1."json?{$location}{$radius}{$type}"
+
+
+        $requestURL = self::WWWKALIPSO_GOOGLE_API_V1."json?query=restaurants+in+{$city}"
             .$this->getKey();
-        error_log($requestURL.' ++++');
+        error_log($requestURL);
         return $this->requestAPI($requestURL);
     }
     public function requestAPI($requestURL){

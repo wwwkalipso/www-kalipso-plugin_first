@@ -3,6 +3,8 @@ namespace includes;
 
 use includes\common\WWWKalipsoDefaultOption;
 use includes\common\WWWKalipsoLoader;
+use includes\models\admin\menu\WWWKalipsoGooglePlaceSubMenuModel;
+use includes\models\admin\menu\WWWKalipsoGuestBookSubMenuModel;
 class WWWKalipsoPlugin
 {
     private static $instance = null;
@@ -32,6 +34,9 @@ class WWWKalipsoPlugin
     {
         // debug.log
         error_log('plugin '.WWWKALIPSO_PlUGIN_NAME.' activation');
+        //Создание таблицы Гостевой книги
+        WWWKalipsoGuestBookSubMenuModel::createTable();
+        WWWKalipsoGooglePlaceSubMenuModel::createTable();
     }
     static public function deactivation()
     {
@@ -39,6 +44,9 @@ class WWWKalipsoPlugin
         error_log('plugin '.WWWKALIPSO_PlUGIN_NAME.' deactivation');
         delete_option(WWWKALIPSO_PlUGIN_OPTION_NAME);
         delete_option(WWWKALIPSO_PlUGIN_OPTION_VERSION);
+
+        WWWKalipsoGuestBookSubMenuModel::deleteTable();
+        WWWKalipsoGooglePlaceSubMenuModel::deleteTable();
     }
 }
 WWWKalipsoPlugin::getInstance();

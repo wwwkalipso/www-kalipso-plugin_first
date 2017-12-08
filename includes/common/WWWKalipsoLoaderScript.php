@@ -13,6 +13,7 @@ class WWWKalipsoLoaderScript
             add_action( 'wp_enqueue_scripts', array(&$this, 'loadScriptSite' ) );
             add_action('wp_head', array(&$this, 'loadHeadScriptSite'));
             add_action( 'wp_footer', array(&$this, 'loadFooterScriptSite'));
+
         }
     }
     public static function getInstance(){
@@ -79,8 +80,43 @@ class WWWKalipsoLoaderScript
         <?php
     }
     public function loadScriptSite($hook){
+
         //Подключение скриптов для frontend
+        //'nonce' => wp_create_nonce( 'google_place' ),
+        $version = null;
+        wp_register_script(
+            WWWKALIPSO_PlUGIN_SLUG.'-Main', //$handle
+            WWWKALIPSO_PlUGIN_URL.'assets/site/js/WWWKalipsoMain.js', //$src
+            array(
+
+                'jquery'
+            ), //$deps
+            $version, //$ver
+            true //$$in_footer
+        );
+        /**
+         * Добавляет скрипт, только если он еще не был добавлен и другие скрипты от которых он зависит зарегистрированы.
+         * Зависимые скрипты добавляются автоматически.
+         */
+        wp_enqueue_script(WWWKALIPSO_PlUGIN_SLUG.'-Main');
+
+        wp_register_style(
+            WWWKALIPSO_PlUGIN_SLUG.'-SiteMain', //$handle
+            WWWKALIPSO_PlUGIN_URL.'assets/site/css/WWWKalipsoMain.css', // $src
+            array(), //$deps,
+            WWWKALIPSO_PlUGIN_VERSION // $ver
+        );
+        /**
+         * Правильно добавляет файл CSS стилей. Регистрирует файл стилей, если он еще не был зарегистрирован.
+         */
+        wp_enqueue_style(WWWKALIPSO_PlUGIN_SLUG.'-SiteMain');
+        // Добавим ajaxurl переменую до скрипта будем использовать функцию
+        // wp_add_inline_script( $handle, $data, $position );
+
+        $data = 'var ajaxurl = "'.WWWKALIPSO_PlUGIN_AJAX_URL.'"; var nonce = "'.wp_create_nonce( 'google_place' ).'" ';
+        wp_add_inline_script( WWWKALIPSO_PlUGIN_SLUG.'-Main', $data, 'before' );
     }
+
     public function loadHeadScriptSite(){}
     public function loadFooterScriptSite(){}
 }

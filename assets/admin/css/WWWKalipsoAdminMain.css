@@ -1,0 +1,19 @@
+.flatTable{
+    width: 100%;
+}
+td{
+    height: auto;
+
+    border: darkred 1px solid;
+}
+tr{
+    box-sizing: border-box;
+    padding-left: 30px;
+    background-color: beige;
+}
+.titleTr{
+
+    background-color: burlywood;
+ 
+
+}
