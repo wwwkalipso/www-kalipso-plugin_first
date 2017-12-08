@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00bfbeb5-6cae-42bd-bc4c-fa9272221b3b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/admin/css/WWWKalipsoAdminMain.css" afterPath="$PROJECT_DIR$/assets/admin/css/WWWKalipsoAdminMain.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/WWWKalipsoPlugin.php" afterPath="$PROJECT_DIR$/includes/WWWKalipsoPlugin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/common/WWWKalipsoDefaultOption.php" afterPath="$PROJECT_DIR$/includes/common/WWWKalipsoDefaultOption.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/common/WWWKalipsoGoogleRequestApi.php" afterPath="$PROJECT_DIR$/includes/common/WWWKalipsoGoogleRequestApi.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/common/WWWKalipsoLoader.php" afterPath="$PROJECT_DIR$/includes/common/WWWKalipsoLoader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/common/WWWKalipsoLoaderScript.php" afterPath="$PROJECT_DIR$/includes/common/WWWKalipsoLoaderScript.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/controllers/admin/menu/WWWKalipsoMainAdminMenuController.php" afterPath="$PROJECT_DIR$/includes/controllers/admin/menu/WWWKalipsoMainAdminMenuController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/controllers/admin/menu/WWWKalipsoMainAdminSubMenuController.php" afterPath="$PROJECT_DIR$/includes/controllers/admin/menu/WWWKalipsoMainAdminSubMenuController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/controllers/site/shortcodes/WWWKalipsoGoogleShortcodeController.php" afterPath="$PROJECT_DIR$/includes/controllers/site/shortcodes/WWWKalipsoGoogleShortcodeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/models/site/WWWKalipsoGoogleShortcodeModel.php" afterPath="$PROJECT_DIR$/includes/models/site/WWWKalipsoGoogleShortcodeModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www-kalipso-plugin.php" afterPath="$PROJECT_DIR$/www-kalipso-plugin.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,18 +17,56 @@
       <file leaf-file-name="WWWKalipsoMain.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/site/js/WWWKalipsoMain.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+            <state relative-caret-position="204">
+              <caret line="12" column="44" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WWWKalipsoAdminMain.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WWWKalipsoAdminMain.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/admin/css/WWWKalipsoAdminMain.css">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WWWKalipsoMain.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/site/css/WWWKalipsoMain.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WWWKalipsoGoogleShortcodeController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/controllers/site/shortcodes/WWWKalipsoGoogleShortcodeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-409">
+              <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+              <folding>
+                <element signature="e#55#96#0#PHP" expanded="true" />
+                <marker date="1512761661713" expanded="true" signature="2626:2904" ph="..." />
+                <marker date="1512761661713" expanded="true" signature="2626:2999" ph="..." />
+                <marker date="1512761661713" expanded="true" signature="2626:3139" ph="..." />
+                <marker date="1512761661713" expanded="true" signature="2626:3226" ph="..." />
+                <marker date="1512761661713" expanded="true" signature="2626:3848" ph="..." />
+                <marker date="1512761661713" expanded="true" signature="2626:3930" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WWWKalipsoGoogleShortcodeModel.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/models/site/WWWKalipsoGoogleShortcodeModel.php">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+              <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -47,8 +75,8 @@
       <file leaf-file-name="WWWKalipsoLoaderScript.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/common/WWWKalipsoLoaderScript.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="115" column="110" lean-forward="false" selection-start-line="115" selection-start-column="98" selection-end-line="115" selection-end-column="110" />
+            <state relative-caret-position="636">
+              <caret line="121" column="1" lean-forward="true" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -57,8 +85,8 @@
       <file leaf-file-name="WWWKalipsoGooglePlaceAjaxHandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/ajax/WWWKalipsoGooglePlaceAjaxHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            <state relative-caret-position="238">
+              <caret line="23" column="13" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="23" selection-end-column="13" />
               <folding>
                 <element signature="e#32#95#0#PHP" expanded="true" />
               </folding>
@@ -134,14 +162,14 @@
         <option value="$PROJECT_DIR$/includes/models/admin/menu/WWWKalipsoGooglePlaceSubMenuModel.php" />
         <option value="$PROJECT_DIR$/includes/common/WWWKalipsoLoader.php" />
         <option value="$PROJECT_DIR$/includes/widgets/WWWKalipsoGooglePlaceDashboardWidget.php" />
-        <option value="$PROJECT_DIR$/includes/controllers/site/shortcodes/WWWKalipsoGoogleShortcodeController.php" />
         <option value="$PROJECT_DIR$/assets/site/css/WWWKalipsoMain.css" />
         <option value="$PROJECT_DIR$/includes/widgets/WWWKalipsoGuestBookDashboardWidget.php" />
         <option value="$PROJECT_DIR$/includes/common/WWWKalipsoLoaderScript.php" />
         <option value="$PROJECT_DIR$/includes/models/site/WWWKalipsoGooglePlaceSubMenuModel.php" />
+        <option value="$PROJECT_DIR$/assets/admin/css/WWWKalipsoAdminMain.css" />
         <option value="$PROJECT_DIR$/includes/ajax/WWWKalipsoGooglePlaceAjaxHandler.php" />
         <option value="$PROJECT_DIR$/assets/site/js/WWWKalipsoMain.js" />
-        <option value="$PROJECT_DIR$/assets/admin/css/WWWKalipsoAdminMain.css" />
+        <option value="$PROJECT_DIR$/includes/controllers/site/shortcodes/WWWKalipsoGoogleShortcodeController.php" />
       </list>
     </option>
   </component>
@@ -370,12 +398,12 @@
       <workItem from="1512492863139" duration="15326000" />
       <workItem from="1512574925694" duration="14008000" />
       <workItem from="1512667863600" duration="9446000" />
-      <workItem from="1512741769164" duration="11066000" />
+      <workItem from="1512741769164" duration="13506000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131627000" />
+    <option name="totallyTimeSpent" value="134067000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -755,26 +783,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/models/site/WWWKalipsoGoogleShortcodeModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/widgets/WWWKalipsoGuestBookDashboardWidget.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/site/css/WWWKalipsoMain.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -791,47 +803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/controllers/site/shortcodes/WWWKalipsoGoogleShortcodeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1309">
-          <caret line="80" column="86" lean-forward="false" selection-start-line="80" selection-start-column="86" selection-end-line="80" selection-end-column="105" />
-          <folding>
-            <marker date="1512678453617" expanded="true" signature="2825:3103" ph="..." />
-            <marker date="1512678453617" expanded="true" signature="2825:3198" ph="..." />
-            <marker date="1512678453617" expanded="true" signature="2825:3338" ph="..." />
-            <marker date="1512678453617" expanded="true" signature="2825:3425" ph="..." />
-            <marker date="1512678453617" expanded="true" signature="2825:4047" ph="..." />
-            <marker date="1512678453617" expanded="true" signature="2825:4129" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/site/js/WWWKalipsoMain.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/common/WWWKalipsoLoaderScript.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="115" column="110" lean-forward="false" selection-start-line="115" selection-start-column="98" selection-end-line="115" selection-end-column="110" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/ajax/WWWKalipsoGooglePlaceAjaxHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-          <folding>
-            <element signature="e#32#95#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/admin/js/WWWKalipsoAdminMain.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -840,10 +811,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/site/css/WWWKalipsoMain.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/common/WWWKalipsoLoaderScript.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="121" column="1" lean-forward="true" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/ajax/WWWKalipsoGooglePlaceAjaxHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <element signature="e#32#95#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/site/js/WWWKalipsoMain.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="44" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/admin/css/WWWKalipsoAdminMain.css">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/controllers/site/shortcodes/WWWKalipsoGoogleShortcodeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-409">
+          <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+          <folding>
+            <element signature="e#55#96#0#PHP" expanded="true" />
+            <marker date="1512761661713" expanded="true" signature="2626:2904" ph="..." />
+            <marker date="1512761661713" expanded="true" signature="2626:2999" ph="..." />
+            <marker date="1512761661713" expanded="true" signature="2626:3139" ph="..." />
+            <marker date="1512761661713" expanded="true" signature="2626:3226" ph="..." />
+            <marker date="1512761661713" expanded="true" signature="2626:3848" ph="..." />
+            <marker date="1512761661713" expanded="true" signature="2626:3930" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/models/site/WWWKalipsoGoogleShortcodeModel.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
           <folding />
         </state>
       </provider>

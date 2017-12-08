@@ -54,9 +54,7 @@ class WWWKalipsoGoogleShortcodeController extends WWWKalipsoShortcodesController
         $atts = shortcode_atts( array(
             'city' => '',
         ), $atts, $tag );
-        /*$reuestAPI = StepByStepRequestApi::getInstance();
-        $data = $reuestAPI->getCalendarPricesMonth($atts['currency'], $atts['origin'],
-            $atts['destination'], $atts['month']);*/
+
         $data = $this->model->getData($atts['city']);
         if ($data == false) return false;
         return $this->render($data);
