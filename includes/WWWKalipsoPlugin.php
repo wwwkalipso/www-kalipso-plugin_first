@@ -3,6 +3,7 @@ namespace includes;
 
 use includes\common\WWWKalipsoDefaultOption;
 use includes\common\WWWKalipsoLoader;
+use includes\custom_post_type\BookPostType;
 use includes\models\admin\menu\WWWKalipsoGooglePlaceSubMenuModel;
 use includes\models\admin\menu\WWWKalipsoGuestBookSubMenuModel;
 class WWWKalipsoPlugin
@@ -11,6 +12,8 @@ class WWWKalipsoPlugin
     private function __construct() {
         WWWKalipsoLoader::getInstance();
         add_action('plugins_loaded', array(&$this, 'setDefaultOptions'));
+        // Создаем Custom Post Type Book
+        new BookPostType();
     }
     public static function getInstance() {
         if ( null == self::$instance ) {

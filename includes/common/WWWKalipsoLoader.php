@@ -75,6 +75,7 @@ class WWWKalipsoLoader
         WWWKalipsoCalendarPricesMonthShortcodeController::newInstance();
         WWWKalipsoGoogleShortcodeController::newInstance();
 
+
         // Шорткод для формы гостевой книги
         WWWKalipsoGuestBookShortcodesController::newInstance();
     }
